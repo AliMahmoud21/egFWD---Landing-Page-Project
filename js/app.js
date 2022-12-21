@@ -26,30 +26,7 @@ let navlistItems = document.querySelector(".navbar__items"),
     })
 
 
-
-    // DON'T CARE...
-    // window.onscroll = function() {
-    //     if(section.scrollY >= -100 && section.scrollY <= 100) {
-    //         sections.forEach(function(section) {
-    //             this.classList.add("your-active-class");
-    //         })
-    //     } else {
-    //         this.classList.remove("your-active-class");
-    //     }
-    // }
-
-
-    // window.onscroll = function() {
-    //     sections.forEach((section) => {
-    //         if(scrollY >= -100) {
-    //             section.classList.add("your-active-class");
-    //         } else if(scrollY <= 100) {
-    //             section.classList.add("your-active-class");
-    //         } else {
-    //             section.classList.remove("your-active-class");
-    //         }
-    //     })
-    // }
+    // This is going to make the scroll behavior smooth
 
     navlistItems.addEventListener('click', (scrolling) => {
         scrolling.preventDefault();
