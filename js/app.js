@@ -15,32 +15,41 @@ let navlistItems = document.querySelector(".navbar__items"),
 
 
 // This is going to but an active class on the section that the view on it. if we move to another section the active class will be set on the new section
-    window.onscroll = function() {
-        sections.forEach(function(section) {
-            if(section.getBoundingClientRect().top >= -150 && section.getBoundingClientRect().top <= 100) {
+    document.addEventListener('scroll', () => {
+        sections.forEach((section) => {
+            if(section.getBoundingClientRect().top >= -250 && section.getBoundingClientRect().top <= 100) {
                 section.classList.add("your-active-class");
             } else {
                 section.classList.remove("your-active-class");
             }
         });
-    }
+    })
 
 
-// I was trying something but it doesn't work :)
-// The class in the next code will be added to every section
 
-// window.onscroll = function() {
-//     sections.forEach(function(sec) {
-//         if(window.scrollY >= -400) {
-//             sec.classList.add("your-active-class");
-//         } else if(window.scrollY <= 150) {
-//             sec.classList.add("your-active-class");
-//         } else {
-//             sec.classList.remove("your-sec-class");
-//         }
-//     })
-// }
+    // DON'T CARE...
+    // window.onscroll = function() {
+    //     if(section.scrollY >= -100 && section.scrollY <= 100) {
+    //         sections.forEach(function(section) {
+    //             this.classList.add("your-active-class");
+    //         })
+    //     } else {
+    //         this.classList.remove("your-active-class");
+    //     }
+    // }
 
+
+    // window.onscroll = function() {
+    //     sections.forEach((section) => {
+    //         if(scrollY >= -100) {
+    //             section.classList.add("your-active-class");
+    //         } else if(scrollY <= 100) {
+    //             section.classList.add("your-active-class");
+    //         } else {
+    //             section.classList.remove("your-active-class");
+    //         }
+    //     })
+    // }
 
     navlistItems.addEventListener('click', (scrolling) => {
         scrolling.preventDefault();
