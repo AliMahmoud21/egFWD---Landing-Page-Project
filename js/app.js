@@ -1,8 +1,11 @@
-// Start importing elements
+/**
+ * Define Global Variables
+ *
+*/
 let navlistItems = document.querySelector(".navbar__items"),
     sections = document.querySelectorAll("section");
 
-    // If we created a new section its list item will added to the navigation section
+    // build the nav
     function createNewList() {
         for(sec of sections) {
             let createNewListItem = document.createElement("li");
@@ -14,7 +17,7 @@ let navlistItems = document.querySelector(".navbar__items"),
 
 
 
-// This is going to but an active class on the section that the view on it. if we move to another section the active class will be set on the new section
+    // Add class 'active' to section when near top of viewport
     document.addEventListener('scroll', () => {
         sections.forEach((section) => {
             if(section.getBoundingClientRect().top >= -250 && section.getBoundingClientRect().top <= 100) {
@@ -26,7 +29,7 @@ let navlistItems = document.querySelector(".navbar__items"),
     })
 
 
-    // This is going to make the scroll behavior smooth
+    // Scroll to anchor ID using scrollTO event
 
     navlistItems.addEventListener('click', (scrolling) => {
         scrolling.preventDefault();
@@ -35,6 +38,3 @@ let navlistItems = document.querySelector(".navbar__items"),
             getElement.scrollIntoView({behavior: "smooth"});
         }
     })
-
-
-
