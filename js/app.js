@@ -38,3 +38,6 @@ let navlistItems = document.querySelector(".navbar__items"),
             getElement.scrollIntoView({behavior: "smooth"});
         }
     })
+
+
+
